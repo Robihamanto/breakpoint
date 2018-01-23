@@ -11,6 +11,8 @@
 		F44A53932014E6ED0085EB7B /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A53922014E6ED0085EB7B /* MeVC.swift */; };
 		F44A5395201592600085EB7B /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A5394201592600085EB7B /* CreatePostVC.swift */; };
 		F44A53972016B3890085EB7B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A53962016B3890085EB7B /* UIViewExtensions.swift */; };
+		F44A53992016F21A0085EB7B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A53982016F21A0085EB7B /* FeedCell.swift */; };
+		F44A539B2016F3D10085EB7B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A539A2016F3D10085EB7B /* Message.swift */; };
 		F474DBD720145E7700D2AA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474DBD620145E7700D2AA56 /* AppDelegate.swift */; };
 		F474DBD920145E7700D2AA56 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474DBD820145E7700D2AA56 /* FeedVC.swift */; };
 		F474DBDB20145E7800D2AA56 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474DBDA20145E7800D2AA56 /* GroupVC.swift */; };
@@ -33,6 +35,8 @@
 		F44A53922014E6ED0085EB7B /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		F44A5394201592600085EB7B /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		F44A53962016B3890085EB7B /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		F44A53982016F21A0085EB7B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		F44A539A2016F3D10085EB7B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F474DBD320145E7700D2AA56 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F474DBD620145E7700D2AA56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F474DBD820145E7700D2AA56 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		F474DBEA20145F5200D2AA56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F44A539A2016F3D10085EB7B /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			children = (
 				F474DBF72014762300D2AA56 /* InsetTextField.swift */,
 				F474DBF920147A8B00D2AA56 /* ShadowView.swift */,
+				F44A53982016F21A0085EB7B /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44A53932014E6ED0085EB7B /* MeVC.swift in Sources */,
+				F44A53992016F21A0085EB7B /* FeedCell.swift in Sources */,
 				F474DBF42014756000D2AA56 /* AuthVC.swift in Sources */,
 				F474DBDB20145E7800D2AA56 /* GroupVC.swift in Sources */,
 				F474DBF6201475B200D2AA56 /* LoginVC.swift in Sources */,
@@ -297,6 +304,7 @@
 				F474DBF82014762300D2AA56 /* InsetTextField.swift in Sources */,
 				F44A53972016B3890085EB7B /* UIViewExtensions.swift in Sources */,
 				F474DBF22014634300D2AA56 /* DataService.swift in Sources */,
+				F44A539B2016F3D10085EB7B /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
