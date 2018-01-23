@@ -12,7 +12,6 @@ Breakpoint
 
 ## breakpoint
 An social media for coder with hacker look like UI 😅
-```
 
 ## Architecture
 
