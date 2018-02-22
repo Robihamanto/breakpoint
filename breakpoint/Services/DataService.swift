@@ -65,6 +65,21 @@ class DataService {
         }
     }
     
+    func getEmail(forSearchQuery query: String, handler: @escaping(_ emailArray: [String]) -> ()) {
+        var emailArray = [String]()
+        REF_USERS.observe(.value) { (userSnapshot) in
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for user in userSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if email.contains(query) == true && email != Auth.auth().currentUser?.email {
+                    emailArray.append(email)
+                }
+            }
+            handler(emailArray)
+        }
+    }
+    
     func getUsername(forUid uid: String, handler: @escaping(_ username: String) -> ()) {
         REF_USERS.observeSingleEvent(of: .value) { (userDataSnapshot) in
             guard let userDataSnapShot = userDataSnapshot.children.allObjects as? [DataSnapshot] else { return }
@@ -76,10 +91,19 @@ class DataService {
         }
     }
     
-    
-    
-    
-    
+    func getIds (forUsernames usernames: [String], handler: @escaping(_ uids: [String]) -> ()) {
+        var uids = [String]()
+        REF_USERS.observeSingleEvent(of: .value) { (userDataSnapshot) in
+            guard let userDataSnapshot = userDataSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for user in userDataSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                if usernames.contains(email){
+                    uids.append(user.key)
+                }
+            }
+            handler(uids)
+        }
+    }
     
     
     
