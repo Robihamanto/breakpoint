@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class AuthVC: UIViewController {
 
@@ -32,8 +33,23 @@ class AuthVC: UIViewController {
     }
     
     @IBAction func signInWithFacebookButtonDidTap(_ sender: Any) {
+        
+    }
+}
+
+extension AuthVC: FBSDKLoginButtonDelegate {
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Logged out from facebook!")
     }
     
-    
-    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+            return
+        } else {
+            print("Sucessfully logged in with facebook")
+        }
+        
+    }
 }
